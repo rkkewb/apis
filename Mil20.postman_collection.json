@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "f2551629-8a7a-4741-8ab8-936a05382bd0",
+		"name": "Mil20",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "aaa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\":\"Ajit\",\"email\":\"ajitbnasxsxszzsscsc@gmail.com\",\"lastName\":\"Singh\",\"userName\":\"ajitbna\",\"phoneNumber\":\"7791010259\",\"password\":\"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/wp-json/api/sign-up",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"wp-json",
+						"api",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Documents",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "passport",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Ajit Singh/Desktop/nfgngfn.pdf"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/upload-documents",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"upload-documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Documents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Documents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\":\"1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/get-documents",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"get-documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save IND info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact Information",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":12334,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"contact\": {\n              \"email\": [\"ajitbna@gmai.com\",\"ajitbna1@gmai.com\"],\n              \"phone\": [{\n                \"phoneNumber\":1234,\n                \"phoneType\" :\"Home\"\n              },{\n                \"phoneNumber\":12345,\n                \"phoneType\" :\"office\"\n              }],\n              \"contactMethod\":[\"phone\",\"email\"]\n            }\n\n            \n          }\n        }\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/ind-contact-info",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"ind-contact-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Citizenship Tax Info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":12334,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"contact\": {\n              \"citizenship_country\": [\"india\",\"pakisthan\"],\n              \"tax\": {\n                \"trn\":12345,\n                \"tin\" :\"67890\"\n              },\n              \"taxesOutsideJamaica\":'Y'\n            }\n\n            \n          }\n        }\n      }\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/citizenship-tax-info",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"citizenship-tax-info"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "16523929-2de9-4a48-908c-fb8ddcd9ef54",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a8cc99ec-81d1-4c19-a4f7-dcc3f4e1fa46",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
