@@ -1,0 +1,1121 @@
+{
+	"info": {
+		"_postman_id": "d2bc1b7e-153a-4f82-8080-f9184ee5f65c",
+		"name": "MIL NEW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Upload docs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbWF5YmVycnlpbnYudGdoZWhyLmNvbSIsImlhdCI6MTU3ODY1NTYwOSwibmJmIjoxNTc4NjU1NjA5LCJleHAiOjE1Nzg3NDIwMDksImRhdGEiOnsidXNlciI6eyJpZCI6IjQifX19.K93Lf_2GgGdAYRXWjBeiih1WWZQzqrT45OZt2IS_aCo",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "vidya@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Rakesh/Pictures/1.PNG"
+								},
+								{
+									"key": "documentType\n",
+									"value": "DL",
+									"type": "text"
+								},
+								{
+									"key": " idNumber\n",
+									"value": "1323",
+									"type": "text"
+								},
+								{
+									"key": "idExpiryDate",
+									"value": "12/13/23",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost/mil/wp-json/api/upload-documents",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"mil",
+								"wp-json",
+								"api",
+								"upload-documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "alok.verma@novoinvent.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Alok@1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://mayberryinv.tghehr.com/wp-json/api/login",
+							"protocol": "https",
+							"host": [
+								"mayberryinv",
+								"tghehr",
+								"com"
+							],
+							"path": [
+								"wp-json",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get doc",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbWF5YmVycnlpbnYudGdoZWhyLmNvbSIsImlhdCI6MTU3OTI0NzIwMywibmJmIjoxNTc5MjQ3MjAzLCJleHAiOjE1NzkzMzM2MDMsImRhdGEiOnsidXNlciI6eyJpZCI6IjgifX19.ty638aRh0RzBGVbVRZwii1WneL4AjW4Mk_ibOkhAOAg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/get-documents",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"get-documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Doc ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbWF5YmVycnlpbnYudGdoZWhyLmNvbSIsImlhdCI6MTU3OTI0NzIwMywibmJmIjoxNTc5MjQ3MjAzLCJleHAiOjE1NzkzMzM2MDMsImRhdGEiOnsidXNlciI6eyJpZCI6IjgifX19.ty638aRh0RzBGVbVRZwii1WneL4AjW4Mk_ibOkhAOAg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "docId",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/delete-documents",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"delete-documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Docs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1Nzk0MTg5MDEsIm5iZiI6MTU3OTQxODkwMSwiZXhwIjoxNTc5NTA1MzAxLCJkYXRhIjp7InVzZXIiOnsiaWQiOiIyIn19fQ.QNqdw0CwiaNFxynG6TwZO1HnW_ZG5gBUa3OsFmlYXbw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "vidya@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "documentType",
+									"value": "DL",
+									"type": "text"
+								},
+								{
+									"key": "idNumber",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "idExpiryDate",
+									"value": "12/12/2019",
+									"type": "text"
+								},
+								{
+									"key": "filePath",
+									"value": "local host",
+									"type": "text"
+								},
+								{
+									"key": "docId",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/update-documents",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"update-documents"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Client Info",
+					"item": [
+						{
+							"name": "SAVE  NDI ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"NDIdetails\": {\n              \"title\": \"MR\",\n               \n              \"firstName\": \"test\",\n               \"middleName\":\"user\",\n              \"lastName\": \"USER\",\n              \"dob\": \"\",\n              \"gender\": \"M\",\n              \"nationality\": [\"IN\" ,\"pak\"],\n              \"residency\": [\"IN\" ,\"pak\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"7896547\",\n              \"idExpiryDate\": \"12/12/2012\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ind-save",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ind-save"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Client Primary Address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":19,\n      \"clientId\":30,\n      \"accountHolders\": {\n        \"primary\": {\n        \"clientInformation\":{\n          \"clientAddressInformation\": {\n            \"residentialAddress\": {\n              \"addressLine1\": \"London\",\n              \"addressLine2\": \"UK\",\n              \"city\": \"GZB\",\n              \"zip\": \"201306\",\n              \"state\": \"M\",\n              \"country\": \"IN\",\n              \"yearAtCurrentResidence\": \"IN\"\n             \n            },\n            \"mailingAddress\": {\n            \"sameAsResidenceAddress\":1,\n              \"addressLine1\": \"GZB\",\n              \"addressLine2\": \"Ghaziabad\",\n              \"city\": \"Noida\",\n              \"zip\": \"309302\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n              \n            }\n          }\n          }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ind-save-address",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ind-save-address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Contact Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":19,\n       \"clientId\":16,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"contact\": {\n            \t\"emailAndPhone\":{\n                 \"primaryEmail\": \"testuser@gmail.com\",\n                \"alternateEmail\":\"test@gmail\" ,\n                \"primaryPhoneNumber\":9756943344,\n                \"primaryPhoneType\" :\"Home\" ,\n                \"alternatePhoneNumber\":8218802700,\n                \"alternatePhoneType\" :\"Ghar\"\n              },\n              \"contactMethod\":[\"phone\",\"phon1\"]\n            }\n\n            \n          }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/ind-contact-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"ind-contact-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Citizenship Tax Info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 6,\n          \"clientId\": 4,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"citizenshipTaxInfo\": {\n              \"citizenshipCountry\": [\"india\",\"pakisthan\"],\n              \"tax\": {\n                \"trn\":4344,\n                \"tin\" :\"67890\"\n              },\n              \"taxesOutsideJamaica\":\"Y\",\n              \"taxOutSideJamaicaCountry\":[\"india\",\"pakisthan\"]\n            }\n\n            \n          }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/citizenship-tax-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"citizenship-tax-info"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "Employee Basic Info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":1,\n       \"clientId\":1,\n      \"accountHolders\": {\n        \"primary\": {\n        \t\"clientInformation\":{\n          \"emplyeeBasicInfo\": {\n            \t\"employementStatus\":\"retired\",\n            \t\"occupation\":\"Salaried\", \n            \t\"typeOfBusiness\":\"Accountants\",\n            \t\"nameOfEmployer\":\"inventvent software\",\n            \t\"jobTitle\":\"Software Engineer\",\n            \t\"tenure\":\"4\"\n            }\n\n        \t}\n          \n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/emplyee-basic-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"emplyee-basic-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save employee address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n     \"applicationNumber\":10,\n      \"clientId\":20,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\" :{\n            \"emplyeeAddressInfo\": {\n             \n              \"addressLine1\": \"Noidaemp\",\n              \"addressLine2\": \"Rakeshemp\",\n              \"city\": \"Kumar\",\n              \"zip\": \"500\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n         \n      \n    }\n  }\n        }\n}\n}\n}\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/emplyee-address-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"emplyee-address-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Employee Contact Info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":9,\n       \"clientId\":13,\n      \"accountHolders\": {\n        \"primary\": {\n       \"clientInformation\":{\n          \"employeeContactInfo\": {\n            \t\"phone\":{\n                \"primaryPhoneNumber\":\"rkkkk\",\n                \"primaryPhoneType\" :\"hhhhh\" ,\n                \"alternatePhoneNumber\":\"12345678\",\n                \"alternatePhoneType\" :\"office\" ,\n                 \"employementEmail\":\"rkkk@gmail.com\",\n                \"employementWebsite\":\"tes1234567t.com\"\n                \n              } \n            \n            }\n\n       \n        }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/save-contact-info-emp",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"save-contact-info-emp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Employee Income Info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r  \"serviceModel\": {\r    \"app\": {\r      \"applicationType\": \"INDIVIDUAL\",\r      \"appType\": \"IN\",\r      \"applicationNumber\":12,\r      \"clientId\": 22,\r      \"accountHolders\": {\r        \"primary\": {\r          \"clientInformation\":{\r          \t\"employeeIncomeInfo\":{\r            \t\"monthlyIncome\":\"Above 5M\",\r            \t\"alternateSourceOfIncome\":\"Y\", \r            \t\"averageAmountMonthly\":\"111111\"\r            }\r\r          }  \r          \r        }\r      }\r    }\r  }\r}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/emplyee-income-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"emplyee-income-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Accredited Investor Info",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r    \"serviceModel\": {\r        \"app\": {\r            \"applicationType\": \"INDIVIDUAL\",\r            \"appType\": \"IN\",\r            \"applicationNumber\": 38,\r            \"clientId\": 17,\r            \"accountHolders\": {\r                \"primary\": {\r                    \"accreditedInvestor\": {\r                        \"accreditedInvestor\": \"Y\"\r                    }\r                }\r            }\r        }\r    }\r}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/accredited-investor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"accredited-investor"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Joint Holder",
+					"item": [
+						{
+							"name": "Joint Holder Employement",
+							"item": [
+								{
+									"name": "Joint Holder NDI ",
+									"item": [
+										{
+											"name": "Add Joint Holder Yes or  No",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":27,\n       \"clientId\":39,\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"isJointholder\": {\n             \"addJointholder\":\"Y\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
+												},
+												"url": {
+													"raw": "{{base_url}}/api/get-jointholder",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"get-jointholder"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Save Joint Holder NDI",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\": 39,\n        \"clientId\": 1,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n    \n            \"NDIdetails\": {\n              \"title\": \"MR\",\n              \"firstName\": \"Alex\",\n               \"middleName\":\"Test\",\n              \"lastName\": \"Kumar\",\n              \"dob\": \"27/04/1996\",\n              \"gender\": \"M\",\n              \"nationality\": [\"IN\"],\n               \"residency\": [\"US\" ,\"UK\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"7895262\",\n              \"idExpiryDate\": \"22/06/2024\",\n              \"isMinorMember\":\"Y\"\n            }\n          }\n          \n         }\n          ]\n        \n      }\n    }\n  }\n}"
+												},
+												"url": {
+													"raw": "{{base_url}}/api/joint-ind-save",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"joint-ind-save"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Joint  holder save address",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":36,\n      \"clientId\":14,\n      \"accountHolders\": {\n        \"jointHolders\": [\n             {  \n           \"jointClientInformation\":{\n            \"clientAddressInformation\": {\n            \"residentialAddress\": {\n              \"addressLine1\": \"America\",\n              \"addressLine2\": \"USA\",\n              \"city\": \"Noida\",\n              \"zip\": \"201306\",\n              \"state\": \"M\",\n              \"country\": \"IN\",\n              \"yearAtCurrentResidence\": \"IN\"\n              \n            },\n            \"mailingAddress\": {\n            \"sameAsResidenceAddress\":0,\n              \"addressLine1\": \"Noida\",\n              \"addressLine2\": \"Gorakhpur\",\n              \"city\": \"Noida\",\n              \"zip\": \"309302\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n              \n            }\n\n                    \n          },\n          \"jointClientId\":15\n       } }]\n      }\n    }\n  }\n}"
+												},
+												"url": {
+													"raw": "{{base_url}}/api/joint-ind-save-address",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"joint-ind-save-address"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": " Joint Holder Contact ",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\" :33,\n       \"clientId\":57,\n      \"accountHolders\": {\n        \"jointHolders\":[ {\n          \"jointClientInformation\": {\n            \"contact\": {\n            \t\"emailAndPhone\":{\n                 \"primaryEmail\": \"abhi@gmail.com\",\n                \"alternateEmail\":\"test@gmail\" ,\n                \"primaryPhoneNumber\":902829664,\n                \"primaryPhoneType\" :\"Home\" ,\n                \"alternatePhoneNumber\":8218802700,\n                \"alternatePhoneType\" :\"office\"\n              },\n              \"contactMethod\":[\"phone\",\"email\"]\n            }\n            \n          }\n          ,\n            \"jointClientId\": 58\n        }]\n      }\n    }\n  }\n}"
+												},
+												"url": {
+													"raw": "{{base_url}}/api/joint-contact-info",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"joint-contact-info"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "Joint Holder Citizenship and tax",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"name": "Content-Type",
+														"value": "application/json",
+														"type": "text"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 1,\n          \"clientId\": 1,\n      \"accountHolders\": {\n        \"jointHolders\":[ {\n          \"jointClientInformation\": {\n            \"citizenshipTaxInfo\": {\n              \"citizenshipCountry\": [\"india\",\"pakisthan\"],\n              \"tax\": {\n                \"trn\":4344,\n                \"tin\" :\"67890\"\n              },\n              \"taxesOutsideJamaica\":\"Y\",\n              \"taxOutSideJamaicaCountry\":[\"india\",\"pakisthan\"]\n            }\n\n            \n          },\n          \"jointClientId\":6\n\n        }]\n      }\n    }\n  }\n}"
+												},
+												"url": {
+													"raw": "{{base_url}}/api/joint-citizenship-tax-info",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"api",
+														"joint-citizenship-tax-info"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"protocolProfileBehavior": {},
+									"_postman_isSubFolder": true
+								},
+								{
+									"name": "Save Joint EMP Basic",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":39,\n       \"clientId\":1,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n  \n              \"emplyeeBasicInfo\": {\n            \t\"employementStatus\":\"retired\",\n            \t\"occupation\":\"Salaried\", \n            \t\"typeOfBusiness\":\"Accountants\",\n            \t\"nameOfEmployer\":\"inventvent software\",\n            \t\"jobTitle\":\"Software Engineer\",\n            \t\"tenure\":\"4\"\n            }\n\n        \n          \n        } ,\n        \"jointClientId\":4\n      }]\n    }\n  \n}\n}\n}"
+										},
+										"url": {
+											"raw": "{{base_url}}/api/joint-emplyee-basic-info",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"joint-emplyee-basic-info"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Save joint Holder Employee address ",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":39,\n       \"clientId\":1,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n  \n              \"emplyeeAddressInfo\": {\n           \n              \"addressLine1\": \"Noida2\",\n              \"addressLine2\": \"Noida\",\n              \"city\": \"Kumar\",\n              \"zip\": \"500\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n         \n      \n    }\n\n        \n          \n        } ,\n        \"jointClientId\":4\n      }]\n    }\n  \n}\n}\n}"
+										},
+										"url": {
+											"raw": "{{base_url}}/api/joint-emplyee-address",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"joint-emplyee-address"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Joint Holder Save Emp Contact",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":39,\n       \"clientId\":1,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n             \"emplyeContactInfo\": {\n            \t\"phone\":{\n                \"primaryPhoneNumber\":\"rkkkk\",\n                \"primaryPhoneType\" :\"Home\" ,\n                \"alternatePhoneNumber\":\"12345678\",\n                \"alternatePhoneType\" :\"office\" ,\n                 \"employementEmail\":\"2345678a@gmail.com\",\n                \"employementWebsite\":\"tes1234567t.com\"\n                \n              } \n              \n             \n            }\n\n        \n          \n        } ,\n        \"jointClientId\": 4\n      }]\n    }\n  \n}\n}\n}"
+										},
+										"url": {
+											"raw": "{{base_url}}/api/joint-emplyee-contact",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"joint-emplyee-contact"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Employment Income",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":47,\n       \"clientId\":17,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n            \"employeeIncomeInfo\":{\n            \t\"monthlyIncome\":\"Above 5M\",\n            \t\"alternateSourceOfIncome\":\"Y\", \n            \t\"averageAmountMonthly\":\"111111\"\n            }\n\n        } ,\n        \"jointClientId\": 17\n      }]\n    }\n  \n}\n}\n}"
+										},
+										"url": {
+											"raw": "{{base_url}}/api/joint-emplyee-income-info",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"api",
+												"joint-emplyee-income-info"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Invest information ",
+					"item": [
+						{
+							"name": "Save Reference Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\":104,\n          \"clientId\": 82,\n      \"accountHolders\": {\n        \"primary\":{\n        \"investmentInformation\":{\n        \"mayberryClientRelationship\":{\n          \"whatInfluencedYourDecision\": [\"TV\",\"cc\"],\n          \"other\":\"other\",\n          \"referenceInformation1\":{\n                \"referenceType\":\"Banker\",\n                \"title\":\"MR\",\n                \"firstName\" :\"Rakesh\",\n                \"middleName\" :\"\",\n                \"lastName\" :\"Tyagi\",\n                \"email\" :\"abhishek@gmail.com\",\n                \"contactNumber\":8218802700\n              },\n           \"referenceInformation2\":{\n                \"referenceType\":\"Accountant\",\n                \"title\":\"MR\",\n                \"firstName\" :\"Rakesh\",\n                \"middleName\" :\"\",\n                \"lastName\" :\"Singh\",\n                \"email\" :\"rakesh@gmail.com\",\n                \"contactNumber\":9012829664\n              }\n        }\n        }\n      }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/reference-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"reference-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Investment Objective And Time Horizon Investment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 12,\n          \"clientId\": 22,\n      \"accountHolders\": {\n        \"primary\": {\n        \t\"investmentInformation\":{\n        \t\"clientObjectiveAndTimeHorizonInfo\":{\n          \"objective\": \"Current Income\",\n          \"timeHorizon\":\"0-5 Years\"\n        \t} \n        }\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/invest-object-and-time",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"invest-object-and-time"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Experience Investment Knowledge",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 42,\n          \"clientId\": 30,\n      \"accountHolders\": {\n        \"primary\": {\n          \"experienceInvestmentKnowledge\": \"Experienced wih Match\"\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/experience-invest-knowledge",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"experience-invest-knowledge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Investment Management(Type of  account)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 12,\n          \"clientId\": 22,\n      \"accountHolders\": {\n        \"primary\":{\n        \"investmentInformation\":{\n        \"investmentManagementServices\":{\n          \"typeOfAccount\": {\n          \t\"discretionary\":{\n          \t\t\"typeOfInvestment\":[\"IMA\",\"QWW\"],\n          \t\t\"riskAppetite\":\"Medium\"\n          \t},\n          \t\"nonDiscretionary\":{\n          \t\t\"typeOfInvestment\":[]\n          \t  }\n             }\n           }\n          }\n         }\n        }\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/type-of-account",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"type-of-account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Saving Insider Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 12,\n          \"clientId\": 22,\n      \"accountHolders\": {\n        \"primary\": {\n        \t\"investmentInformation\":{\n        \t\"insiderInformation\": {\n          \t\t\"seniorOfficerOrDirector\":1,\n          \t\t\"companySeniorOfficerOrDirector\":[\"qwerty\"],\n          \t\t\"holdOrControl\":1,\n          \t\t\"companyHoldOrControl\":[\"qwertyui\"]\n          \t\t}\n        \t}\n          }\n        }\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/insider-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"insider-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Save Source Of Funds ",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\":38,\n          \"clientId\": 17,\n      \"accountHolders\": {\n        \"primary\": {\n          \"sourceOfFundsAndBankingInformation\":{\n          \"sourceOfFunds\":{\n          \t\"sourceOfIncome\": [\"AV\",\"VB\"],\n          \t\"sourceOfInitialDeposit\":\"fffd\" ,\n          \t\"nameOfTheEmployer\":\"fbf\" ,\n          \t\"dateEmployed\":\"fbfdb\",\n          \t\"nameOfGiver\":\"fbf\" ,\n          \t\"relationship\":\"fbfdb\",\n          \t\"nameOfEstate\":\"fbf\",\n          \t\"when1\":\"fdbf\" ,\n          \t\"pleaseSpecify\":\"ffb\" ,\n          \t\"initialInvestmentAmount\":\"fbf\",\n          \t\"averageGrossEncashmentsMonthly\":\"100\",\n          \t\"averageGrossInvestment\":\"fbfdbd\",\n          \t\"contributionBeMadeToInitialInvestment\":\"fdbf\",\n          \t\"estimatedAmount\":\"vfvfd\",\n          \t\"frequency\":\"fvdfv\", \n          \t\"investmentMethod\":\"fvdfv\"\n          }\n        \t}\n        }\n      }\n    }\n  }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/fund-source-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"fund-source-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Banking Information",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\": 104,\n       \"clientId\": 82,\n      \"accountHolders\": {\n        \"primary\": {\n        \"sourceOfFundsAndBankingInformation\":{\n          \"bankingInformation\":[{\n                \"nameOfBank\":\"Axis\",\n                \"bankAccountNumber\" :7895685,\n                \"branch\" :\"Noida\",\n                \"swiftCode\" :\"WERG123\",\n                \"currency\":\"INR\"\n              },{\n                \"nameOfBank\":\"Axis\",\n                \"bankAccountNumber\" :7895685,\n                \"branch\" :\"Noida\",\n                \"swiftCode\" :\"WERG123\",\n                \"currency\":\"INR\"\n              }]\n          }\n        }\n        }\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/banking-info",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"banking-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PEP and Us Person",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"serviceModel\": {\n        \"app\": {\n            \"applicationType\": \"INDIVIDUAL\",\n            \"appType\": \"IN\",\n            \"applicationNumber\": 42,\n            \"clientId\": 10,\n            \"accountHolders\": {\n                \"primary\": {\n                \t\"clientInformation\":{\n                \t \"pepAndUsPerson\" :{\n                \t \"isAnyAccHolderPep\":\"Y\",\n                     \"pepAccountHoldersIds\":[11],\n                \t \"isAnyAccHolderUsPerson\":\"Y\",\n                \t \"usPersonAccountHoldersIds\":[11]\n                \t }\n                }\n                }\n            }\n        }\n    }\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/is-pep-and-usperson",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"is-pep-and-usperson"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Corprate",
+					"item": [
+						{
+							"name": "dummay",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Agreements And Esign",
+					"item": [
+						{
+							"name": "Agreements",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 18,\n          \"clientId\": 29,\n      \"accountHolders\": {\n        \"primary\": {\n          \"agreements\":{\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          \t\"general\":\"1\",\n          }\n          }\n        }\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/agreements",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"agreements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Esign",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 18,\n          \"clientId\": 29,\n      \"accountHolders\": {\n        \"primary\": {\n          \"esign\":{\n          \t\"signaturesDisclaimer1\":\"1\",\n          \t\"signaturesDisclaimer2\":\"1\"\n          }\n          }\n        }\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/esign",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"esign"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
