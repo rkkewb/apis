@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d2bc1b7e-153a-4f82-8080-f9184ee5f65c",
+		"_postman_id": "9f9d3f83-3621-45a5-b50b-a1a33bf126ff",
 		"name": "MIL NEW",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -227,6 +227,34 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update Photo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profileImageUrl",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/update-photo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"update-photo"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -247,11 +275,16 @@
 										"name": "Content-Type",
 										"type": "text",
 										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1ODAxMjg5NDMsIm5iZiI6MTU4MDEyODk0MywiZXhwIjoxNTgwMjE1MzQzLCJkYXRhIjp7InVzZXIiOnsiaWQiOiI0NSJ9fX0.grxooUcEu9EaKOtphHWotEHFqrOSyOnN4R7poo59utE",
+										"type": "text"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"NDIdetails\": {\n              \"title\": \"MR\",\n               \n              \"firstName\": \"test\",\n               \"middleName\":\"user\",\n              \"lastName\": \"USER\",\n              \"dob\": \"\",\n              \"gender\": \"M\",\n              \"nationality\": [\"IN\" ,\"pak\"],\n              \"residency\": [\"IN\" ,\"pak\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"7896547\",\n              \"idExpiryDate\": \"12/12/2012\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
+									"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"accountHolders\": {\n        \"primary\": {\n          \"clientInformation\": {\n            \"NDIdetails\": {\n              \"title\": \"MR\",\n               \n              \"firstName\": \"test\",\n               \"middleName\":\"user\",\n              \"lastName\": \"USER\",\n              \"dob\": \"\",\n              \"gender\": \"M\",\n              \"nationality\": [\"IN\" ,\"pak\"],\n              \"residency\": [\"IN\" ,\"pak\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"7896547\",\n              \"idExpiryDate\": \"12/12/2024\"\n            }\n          }\n        }\n      }\n    }\n  }\n}"
 								},
 								"url": {
 									"raw": "{{base_url}}/api/ind-save",
@@ -557,11 +590,16 @@
 														"name": "Content-Type",
 														"value": "application/json",
 														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1ODAyNzYxMjUsIm5iZiI6MTU4MDI3NjEyNSwiZXhwIjoxNTgwMzYyNTI1LCJkYXRhIjp7InVzZXIiOnsiaWQiOiI4In19fQ.80JTSO09BYJLb-aGOlpqqsqYkqXPHz5-RVba-060mN8",
+														"type": "text"
 													}
 												],
 												"body": {
 													"mode": "raw",
-													"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\": 39,\n        \"clientId\": 1,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n    \n            \"NDIdetails\": {\n              \"title\": \"MR\",\n              \"firstName\": \"Alex\",\n               \"middleName\":\"Test\",\n              \"lastName\": \"Kumar\",\n              \"dob\": \"27/04/1996\",\n              \"gender\": \"M\",\n              \"nationality\": [\"IN\"],\n               \"residency\": [\"US\" ,\"UK\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"7895262\",\n              \"idExpiryDate\": \"22/06/2024\",\n              \"isMinorMember\":\"Y\"\n            }\n          }\n          \n         }\n          ]\n        \n      }\n    }\n  }\n}"
+													"raw": " {\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\": 60,\n        \"clientId\": 89,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n    \n            \"NDIdetails\": {\n              \"title\": \"MR\",\n              \"firstName\": \"Pra\",\n               \"middleName\":\"Test\",\n              \"lastName\": \"Kumar\",\n              \"dob\": \"27/04/1996\",\n              \"gender\": \"M\",\n              \"nationality\": [\"INMod\" ,\"Change\"],\n               \"residency\": [\"Rk\" ,\"UK\"],\n              \"countryOfBirth\": \"IN\",\n              \"identificationType\": \"DL\",\n              \"idNumber\": \"12345\",\n              \"idExpiryDate\": \"22/06/2024\",\n              \"isMinorMember\":\"Y\"\n            }\n          }\n          ,\n            \"jointClientId\": \"91\"\n         }\n          ]\n        \n      }\n    }\n  }\n}"
 												},
 												"url": {
 													"raw": "{{base_url}}/api/joint-ind-save",
@@ -586,11 +624,16 @@
 														"name": "Content-Type",
 														"value": "application/json",
 														"type": "text"
+													},
+													{
+														"key": "Authorization",
+														"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1ODAyNzYxMjUsIm5iZiI6MTU4MDI3NjEyNSwiZXhwIjoxNTgwMzYyNTI1LCJkYXRhIjp7InVzZXIiOnsiaWQiOiI4In19fQ.80JTSO09BYJLb-aGOlpqqsqYkqXPHz5-RVba-060mN8",
+														"type": "text"
 													}
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":36,\n      \"clientId\":14,\n      \"accountHolders\": {\n        \"jointHolders\": [\n             {  \n           \"jointClientInformation\":{\n            \"clientAddressInformation\": {\n            \"residentialAddress\": {\n              \"addressLine1\": \"America\",\n              \"addressLine2\": \"USA\",\n              \"city\": \"Noida\",\n              \"zip\": \"201306\",\n              \"state\": \"M\",\n              \"country\": \"IN\",\n              \"yearAtCurrentResidence\": \"IN\"\n              \n            },\n            \"mailingAddress\": {\n            \"sameAsResidenceAddress\":0,\n              \"addressLine1\": \"Noida\",\n              \"addressLine2\": \"Gorakhpur\",\n              \"city\": \"Noida\",\n              \"zip\": \"309302\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n              \n            }\n\n                    \n          },\n          \"jointClientId\":15\n       } }]\n      }\n    }\n  }\n}"
+													"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n      \"applicationNumber\":59,\n      \"clientId\":83,\n      \"accountHolders\": {\n        \"jointHolders\": [\n             {  \n           \"jointClientInformation\":{\n            \"clientAddressInformation\": {\n            \"residentialAddress\": {\n              \"addressLine1\": \"America\",\n              \"addressLine2\": \"USA\",\n              \"city\": \"Noida\",\n              \"zip\": \"201306\",\n              \"state\": \"M\",\n              \"country\": \"IN\",\n              \"yearAtCurrentResidence\": \"IN\"\n              \n            },\n            \"mailingAddress\": {\n            \"sameAsResidenceAddress\":0,\n              \"addressLine1\": \"Noida\",\n              \"addressLine2\": \"Gorakhpur\",\n              \"city\": \"Noida\",\n              \"zip\": \"309302\",\n              \"state\": \"M\",\n              \"country\": \"IN\"\n              \n            }\n\n                    \n          }\n          \n       },\"jointClientId\" :84}]\n      }\n    }\n  }\n}"
 												},
 												"url": {
 													"raw": "{{base_url}}/api/joint-ind-save-address",
@@ -779,6 +822,33 @@
 												"api",
 												"joint-emplyee-income-info"
 											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Accredited Investor",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n       \"applicationNumber\":47,\n       \"clientId\":17,\n      \"accountHolders\": {\n        \"jointHolders\": \n          [\n         { \n           \"jointClientInformation\": {\n            \"accreditedInvestor\": {\n                        \"accreditedInvestor\": \"Y\"\n                    }\n\n        } ,\n        \"jointClientId\": 17\n      }]\n    }\n  \n}\n}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": ""
 										}
 									},
 									"response": []
@@ -1031,24 +1101,6 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Corprate",
-					"item": [
-						{
-							"name": "dummay",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": ""
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
 					"name": "Agreements And Esign",
 					"item": [
 						{
@@ -1112,6 +1164,121 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "update review flag",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1ODAxMTEwOTYsIm5iZiI6MTU4MDExMTA5NiwiZXhwIjoxNTgwMTk3NDk2LCJkYXRhIjp7InVzZXIiOnsiaWQiOiI0NSJ9fX0.Mmf2doKDj6mD6Pw6_lLPu_UO3ltlbr_NZeDcHC0hrG8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"serviceModel\": {\n    \"app\": {\n      \"applicationType\": \"INDIVIDUAL\",\n      \"appType\": \"IN\",\n        \"applicationNumber\": 18,\n          \"clientId\": 29,\n      \"accountHolders\": {\n        \"primary\": {\n          \"review\":{\n          \t\"isReviewCompleted\":\"1\"\n \n          }\n          }\n        }\n      }\n    }\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/update-review",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"update-review"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get  application status",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvbG9jYWxob3N0XC9taWwiLCJpYXQiOjE1ODAxMzE0ODEsIm5iZiI6MTU4MDEzMTQ4MSwiZXhwIjoxNTgwMjE3ODgxLCJkYXRhIjp7InVzZXIiOnsiaWQiOiI0NSJ9fX0.Htdep2i3u1gS4uikzKePIDkh8WqQ5oCAWhE-e1sz3tY",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/user-current-application-detail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"user-current-application-detail"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Coporate",
+			"item": [
+				{
+					"name": "Shareholders",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"serviceModel\": {\r\n    \"app\": {\r\n      \"applicationType\": \"CORPORATE\",\r\n      \"appType\": \"IN\",\r\n      \"applicationNumber\":36,\r\n      \"clientId\":14,\r\n      \"directorsAndShareHolders\": {\r\n        \"shareHolders\": [\r\n            {\r\n              \"personalDetails\":{\r\n                \"type\" :\"Usperosn\" ,\r\n                 \"isPepOrNon\" :\"Pep\" ,\r\n                 \"other\" :\"value\"\r\n              } ,\r\n              \"typeOfShareHolders\" : {\r\n                \"typeOfShareholder\" :\"A\" ,\r\n                 \"percentageOfOwnership\" :\"123456\" ,\r\n                 \"date\" :\"123456\" ,\r\n                  \"name\":\"123456\" ,\r\n                   \"business\" :\"123456\" ,\r\n                   \"countryOfCitizen\" : [\"IN\" ,\"AUS\"],\r\n                   \"corporateTitle\" :\"\" ,\r\n                   \"countryOfTaxResidence\" :[\"US\" ,\"IN\"]\r\n                 \r\n              },\r\n               \"shareholderAddressInformation\": {\r\n            \"residentialAddress\": {\r\n              \"addressLine1\": \"London\",\r\n              \"addressLine2\": \"UK\",\r\n              \"city\": \"GZB\",\r\n              \"zip\": \"201306\",\r\n              \"state\": \"M\",\r\n              \"country\": \"IN\",\r\n              \"yearAtCurrentResidence\": \"IN\"\r\n             \r\n            },\r\n            \"mailingAddress\": {\r\n            \"sameAsResidenceAddress\":0,\r\n              \"addressLine1\": \"GZB\",\r\n              \"addressLine2\": \"Ghaziabad\",\r\n              \"city\": \"Noida\",\r\n              \"zip\": \"309302\",\r\n              \"state\": \"M\",\r\n              \"country\": \"IN\"\r\n              \r\n            }\r\n          } ,\r\n          \"tax\": [{\r\n                \"taxType\":\"trn\",\r\n                \"taxNo\" :8465\r\n              } ,{\r\n                \"taxType\":\"trn\",\r\n                \"taxNo\" :8465\r\n              }],\r\n          \"identification\":{\r\n          \"personalIdType\" :\"1\" ,\r\n          \"idNumber\": \"12\" ,\r\n          \"PlaceOfIssuance\" :\"121\"\r\n          }    \r\n            }\r\n           ] ,\r\n         \"currentShareholderId\" :\"155\"\r\n       } \r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/save-shareholders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"save-shareholders"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
